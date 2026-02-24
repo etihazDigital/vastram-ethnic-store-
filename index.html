@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vastram Clothing Store</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff8f5;
+}
+
+header {
+    background: #7a1f3d;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+button {
+    background: #7a1f3d;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background: #a52a4d;
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Vastram Clothing Store</h1>
+    <p>Premium Ethnic Wear for Women in Bari Sadri</p>
+</header>
+
+<section class="products">
+
+<div class="product">
+<img src="https://via.placeholder.com/300x400">
+<h3>Co-Ord Set</h3>
+<p>₹1999</p>
+<button onclick="orderNow('Co-Ord Set',1999)">Order on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/300x400">
+<h3>Kurti with Palazzo</h3>
+<p>₹1499</p>
+<button onclick="orderNow('Kurti with Palazzo',1499)">Order on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/300x400">
+<h3>Lehenga</h3>
+<p>₹4999</p>
+<button onclick="orderNow('Lehenga',4999)">Order on WhatsApp</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/300x400">
+<h3>Festive Diwali Outfit</h3>
+<p>₹2999</p>
+<button onclick="orderNow('Festive Diwali Outfit',2999)">Order on WhatsApp</button>
+</div>
+
+</section>
+
+<footer>
+<p>📍 Station Road, Behind SBI Bank, Bari Sadri, Rajasthan 312403</p>
+<p>📞 9950130940</p>
+<p>Cash on Delivery Available</p>
+</footer>
+
+<script>
+function orderNow(product, price) {
+let phone = "919950130940";
+
+let message = `Hello Vastram Clothing Store,
+
+I want to order:
+
+Product: ${product}
+Price: ₹${price}
+
+Please confirm availability.
+
+Thank you.`;
+
+let whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>
